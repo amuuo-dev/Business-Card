@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import ProjectCard from "./ProjectCard";
 import {
   StyleSheet,
   Text,
@@ -51,54 +52,44 @@ export default function App() {
 
             <Button title="Contact Me" onPress={() => handleButtonClicked()} />
 
-            <Text style={{ padding: 10, fontSize: 16, lineHeight: 20 }}>
+            <Text
+              style={{
+                padding: 10,
+                fontSize: 16,
+                lineHeight: 20,
+                textAlign: "center",
+              }}
+            >
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam
-              aliquam sem et tortor consequat id porta nibh. Pellentesque nec
-              nam aliquam sem. Placerat duis ultricies lacus sed. Non curabitur
-              gravida arcu ac tortor dignissim convallis aenean. Amet nisl purus
-              in mollis nunc. Vel elit scelerisque mauris pellentesque pulvinar
-              pellentesque. Sagittis orci a scelerisque purus semper eget duis
-              at tellus. Sed libero enim sed faucibus turpis in eu mi bibendum.
-              Duis at consectetur lorem donec massa sapien faucibus et molestie.
-              At ultrices mi tempus imperdiet nulla malesuada pellentesque elit
-              eget. Purus sit amet volutpat consequat mauris nunc congue nisi
-              vitae. Urna condimentum mattis pellentesque id nibh tortor id.
-              Consequat id porta nibh venenatis. Lectus vestibulum mattis
-              ullamcorper velit sed ullamcorper. Mauris a diam maecenas sed enim
-              ut sem. Volutpat commodo sed egestas egestas fringilla phasellus.
-              Turpis egestas integer eget aliquet nibh praesent tristique magna
-              sit. Congue mauris rhoncus aenean vel elit scelerisque. Tellus
-              integer feugiat scelerisque varius morbi enim. Consectetur a erat
-              nam at. Bibendum arcu vitae elementum curabitur vitae nunc. Sit
-              amet consectetur adipiscing elit. Rhoncus mattis rhoncus urna
-              neque viverra justo. Malesuada pellentesque elit eget gravida.
-              Vitae nunc sed velit dignissim sodales ut eu sem integer.
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Text>
-            <Text style={{ padding: 10, fontSize: 16, lineHeight: 20 }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Nam
-              aliquam sem et tortor consequat id porta nibh. Pellentesque nec
-              nam aliquam sem. Placerat duis ultricies lacus sed. Non curabitur
-              gravida arcu ac tortor dignissim convallis aenean. Amet nisl purus
-              in mollis nunc. Vel elit scelerisque mauris pellentesque pulvinar
-              pellentesque. Sagittis orci a scelerisque purus semper eget duis
-              at tellus. Sed libero enim sed faucibus turpis in eu mi bibendum.
-              Duis at consectetur lorem donec massa sapien faucibus et molestie.
-              At ultrices mi tempus imperdiet nulla malesuada pellentesque elit
-              eget. Purus sit amet volutpat consequat mauris nunc congue nisi
-              vitae. Urna condimentum mattis pellentesque id nibh tortor id.
-              Consequat id porta nibh venenatis. Lectus vestibulum mattis
-              ullamcorper velit sed ullamcorper. Mauris a diam maecenas sed enim
-              ut sem. Volutpat commodo sed egestas egestas fringilla phasellus.
-              Turpis egestas integer eget aliquet nibh praesent tristique magna
-              sit. Congue mauris rhoncus aenean vel elit scelerisque. Tellus
-              integer feugiat scelerisque varius morbi enim. Consectetur a erat
-              nam at. Bibendum arcu vitae elementum curabitur vitae nunc. Sit
-              amet consectetur adipiscing elit. Rhoncus mattis rhoncus urna
-              neque viverra justo. Malesuada pellentesque elit eget gravida.
-              Vitae nunc sed velit dignissim sodales ut eu sem integer.
+
+            <Text style={{ marginTop: 20, fontWeight: "bold", fontSize: 18 }}>
+              Projects
             </Text>
+
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{ gap: 10, padding: 10 }}
+            >
+              <ProjectCard
+                name="Apple Cards"
+                image={require("./assets/projects/project1.jpeg")}
+              />
+              <ProjectCard
+                name="Trello"
+                image={require("./assets/projects/project2.jpeg")}
+              />
+              <ProjectCard
+                name="Flappy Birds"
+                image={require("./assets/projects/project3.jpeg")}
+              />
+              <ProjectCard
+                name="To-Do App"
+                image={require("./assets/projects/project4.jpeg")}
+              />
+            </ScrollView>
 
             <StatusBar style="light" />
           </View>
